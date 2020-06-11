@@ -1,0 +1,30 @@
+#1 Write a function that returns the largest element in a list.
+
+test = [true, :symbol, 5, "String", [0], {number: 5} ]
+
+def largest_element(array)
+  new_array = []
+  array.each do |element|
+    if element == true
+      new_array.push("true".length.to_f)
+    elsif element == false
+      new_array.push("false".length.to_f)
+    elsif element.is_a? Symbol
+      new_array.push(element.to_s.length)
+    elsif element.is_a? Integer
+      new_array.push(element)
+    elsif element.is_a? Float
+      new_arrray.push(element.to_i)
+    elsif element.is_a? String
+      new_array.push(element.length)  
+    elsif element.is_a? Array
+      new_array.push(element.count)
+    elsif element.is_a? Hash
+      new_array.push(element.count)
+    end
+  end
+  puts new_array
+  puts new_array.max
+end
+
+largest_element(test)

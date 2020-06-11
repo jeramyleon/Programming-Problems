@@ -1,0 +1,27 @@
+#Beginner 6 Write a program that asks the user for a number n and gives them the possibility to choose between computing the sum and computing the product of 1,…,n.
+
+def sum_or_product(end_num, sum=true)
+  if sum 
+    start_num = 1
+    num_array = []
+    while start_num <= end_num
+      num_array.push(start_num)
+      start_num += 1
+    end
+    sum = 0
+    num_array.each {|num| sum += num }
+    puts sum
+  else 
+    start_num = 1
+    num_array = []
+    while start_num <= end_num
+      num_array.push(start_num)
+      start_num += 1
+    end
+    product = 1
+    num_array.each {|num| product *= num }
+    puts product
+  end
+end
+
+sum_or_product(5)

@@ -1,0 +1,17 @@
+#Beginner 4 Write a program that asks the user for a number n and prints the sum of the numbers 1 to n
+
+def program(end_num)
+  puts "Error. Not a number" if end_num.is_a? String
+  start_num = 1
+  num_array = []
+  while start_num <= end_num
+    num_array.push(start_num)
+    start_num += 1
+  end
+  sum = 0
+  num_array.each {|num| sum += num }
+  puts sum
+  
+end
+
+program(15)

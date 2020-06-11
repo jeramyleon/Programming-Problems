@@ -1,0 +1,18 @@
+1. user has to guess
+2. every guess the program tells if num
+is too large or small
+3. user guesses correct
+number tries needed printed
+4. if same num entered, only counts as
+one try
+
+1. Prompt user for guess
+2. check if user input is too small or 
+too big or equal
+3. if too small, tells user its too small
+lists try down and back to step 1. if too
+big, tells user its too big, lists try down,
+back to step 1. if same input again, back
+to step 1. if equal, on to step 4.
+4. prints number of tries, congratulates
+player. 

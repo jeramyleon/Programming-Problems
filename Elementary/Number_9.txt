@@ -1,0 +1,47 @@
+#9 Write a guessing game where the user has to guess a secret number. After every guess the program tells the user whether their number was too large or too small. At the end the number of tries needed should be printed. It counts only as one try if they input the same number multiple times consecutively.
+secret_number = 8
+#9 Write a guessing game where the user has to guess a secret number. After every guess the program tells the user whether their number was too large or too small. At the end the number of tries needed should be printed. It counts only as one try if they input the same number multiple times consecutively.
+secret_number = 8
+all_guesses = []
+element = -1
+tries = 0
+correct = false 
+
+while correct == false
+
+  puts "Guess my secret number between 1 and 20"
+  user_input = gets.chomp.to_i
+
+  if user_input < secret_number
+    puts "Number too small! Try again."
+    all_guesses.push(user_input)
+    element += 1 
+    if element == 0 
+      tries += 1 
+    elsif all_guesses[element] != all_guesses[element - 1] 
+      tries += 1
+    end
+
+  elsif user_input > secret_number
+    puts "Number too small! Try again."
+    all_guesses.push(user_input)
+    element += 1 
+    if element == 0
+      tries += 1
+    elsif all_guesses[element] != all_guesses[element - 1]
+      tries += 1 
+    end
+
+  elsif user_input == secret_number 
+    tries += 1 
+    puts "Congratulations! You guessed my secret number!"
+    puts "Number of tries needed #{tries.to_s}"
+    correct = true 
+  end 
+
+end
+
+
+
+
+
