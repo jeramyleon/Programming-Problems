@@ -28,7 +28,7 @@ def largest_element(array)
 
   end
 
- 
+  puts new_array  
 
   #comparing values here to return biggest element by mapping new_array to original array
   element_place = 0
