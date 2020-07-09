@@ -1,0 +1,13 @@
+#6 Write a function that tests whether a string is a palindrome.
+string = "Eva, Can I Stab Bats In A Cave?"
+array = string.split("")
+array.delete(" ")
+
+punctuation = [ ".", "?", "!", ",", ":", ";", "-", "(", ")", "[", "]", "{", "}" ]
+punctuation.each { |punc| array.delete(punc) }
+
+string1 = array.join.downcase
+string2 = string1.reverse
+
+puts "THIS IS A PALINDROME" if string1 == string2
+puts "THIS IS NOT A PALINDROME" if string1 != string2

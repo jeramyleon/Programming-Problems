@@ -1,0 +1,30 @@
+#7 Write three functions that compute the sum of the numbers in a list: using a for-loop, a while-loop and recursion. (Subject to availability of these constructs in your language of choice.)
+list = [ 1, 2, 3, 4, 5 ]
+# for loop
+sum = 0
+for num in list do
+  sum += num
+end
+puts sum
+
+# while loop
+sum, element_place = 0, 0
+while element_place < list.count
+  sum += list[element_place]
+  element_place += 1
+end
+puts sum
+
+# recursion
+def sum_list(array)
+  puts array if array.count == 1
+  return true if array.count == 1
+  
+  puts array
+  array[-2] += array[-1]
+  array.pop
+
+  sum_list(array)
+
+end 
+sum_list(list)
