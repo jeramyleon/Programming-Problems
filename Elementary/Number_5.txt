@@ -1,17 +1,14 @@
-#Beginner 5 Modify the previous program such that only multiples of three or five are considered in the sum, e.g. 3, 5, 6, 9, 10, 12, 15 for n=17
+#5 Modify the previous program such that only multiples of three or five are considered in the sum, e.g. 3, 5, 6, 9, 10, 12, 15 for n=17
 
-def program(end_num)
-  puts "Error. Not a number" if end_num.is_a? String
-  start_num = 1
-  num_array = []
-  while start_num <= end_num
-    num_array.push(start_num) if start_num % 3 == 0 
-    start_num += 1
-  end
-  sum = 0
-  num_array.each {|num| sum += num }
-  puts sum
+puts "Give me a number: "
+number = gets.chomp.to_i
+sum = 0
+for num in 1..number
+  next if num % 5 != 0 || num % 3 != 0
+  sum += num 
   
 end
 
-program(15)
+puts sum
+
+

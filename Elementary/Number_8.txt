@@ -1,53 +1,10 @@
 #8 Write a program that prints all prime numbers. (Note: if your programming language does not support arbitrary size numbers, printing all primes up to the largest number you can easily represent is fine too.)
+require 'prime'
 def is_prime?(number)
-  return false if number == 1
-  return true if number == 2
-  return true if number == 3
-  
-  array_to_check = []
-  start_num = 1
-
-  until start_num > number 
-   array_to_check.push(number/start_num.to_f)
-   start_num += 1 
-  end
-
-  array_to_check.delete_at(array_to_check.index 1)
-  array_to_check.delete_at(array_to_check.index number)
-
-  alter_array = []
-  array_to_check.each { |num| alter_array.push(num.to_s.split(".0"))}
-  
-  new_array = []
-  alter_array.each do |element|
-    if element[1] == nil
-      new_array.push(element[0])
-    else
-      new_array.push(element[0] + "." + element[1])
-    end
-  end
-  
-  new_array2 = []
-  new_array.each do |element|
-    if element.include? "."
-      new_array2.push(element.to_f)
-    else
-      new_array2.push(element.to_i)
-    end
-  end
-
-  new_array2.each do |element|
-    return false if element.instance_of? Fixnum
-  end
-  
-  true 
+  true if Prime.prime?(number)
 end
 
-
-array = []
-(1..100).each { |num| array.push(num) }
-
-array.each do |digit|
+(1..100).each do |digit|
    puts digit if is_prime?(digit)
 end
 

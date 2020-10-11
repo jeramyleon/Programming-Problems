@@ -2,10 +2,5 @@
 
 puts "What is your name?"
 name = gets.chomp.downcase
-if name == "alice"
-  puts "Hey there alice!"
-elsif name == "bob"
-  puts "Hey there bob!"
-else
-  puts "Who are you?"
-end
+puts "who are you" if  name != "alice" && name != "bob"
+puts "Hey there #{name}" if name == "alice" || name == "bob"

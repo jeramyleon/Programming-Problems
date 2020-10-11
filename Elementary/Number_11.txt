@@ -5,7 +5,7 @@
 alternating_series = []
 new_series = []
 new_series2 = []
-(1..1000000).each { |k| alternating_series.push(k) }
+(1..1_000_000).each { |k| alternating_series.push(k) }
 alternating_series.each { |k|
   new_series.push((-1)**(k+1)/(2 * k-1))
 }
