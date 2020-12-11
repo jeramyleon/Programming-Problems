@@ -1,14 +1,10 @@
 #5 Modify the previous program such that only multiples of three or five are considered in the sum, e.g. 3, 5, 6, 9, 10, 12, 15 for n=17
 
-puts "Give me a number: "
-number = gets.chomp.to_i
+number = 17
 sum = 0
 for num in 1..number
-  next if num % 5 != 0 || num % 3 != 0
-  sum += num 
+  sum += num if num % 3 == 0 || num % 5 == 0
   
 end
 
-puts sum
-
-
+print sum

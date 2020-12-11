@@ -1,0 +1,12 @@
+#10 Write a function that combines two lists by alternatingly taking elements, e.g. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
+list1 = [ "a", "b", "c" ]
+list2 = [ 1, 2, 3 ]
+
+new_list = []
+element_place = 0
+until element_place == list1.count
+  new_list.push(list1[element_place])
+  new_list.push(list2[element_place])
+  element_place += 1
+  puts new_list
+end

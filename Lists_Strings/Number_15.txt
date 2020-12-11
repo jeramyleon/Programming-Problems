@@ -1,0 +1,8 @@
+#15 Write functions that add, subtract, and multiply two numbers in their digit-list representation (and return a new digit list). If you’re ambitious you can implement Karatsuba multiplication. Try different bases. What is the best base if you care about speed? If you couldn’t completely solve the prime number exercise above due to the lack of large numbers in your language, you can now use your own library for this task.
+list1 = [ 1, 2, 3, 4, 5, 6 ]
+list2 = [ 7, 8, 9, 10, 11, 12 ]
+
+puts (list1.inject{|e1,e2|e1*10+e2} + list2.inject{|e1,e2|e1*10+e2}).to_s.split("").map(&:to_i)
+puts (list1.inject{|e1,e2|e1*10+e2} - list2.inject{|e1,e2|e1*10+e2}).to_s.split("").map(&:to_i)
+puts (list1.inject{|e1,e2|e1*10+e2} * list2.inject{|e1,e2|e1*10+e2}).to_s.split("").map(&:to_i)
+ 

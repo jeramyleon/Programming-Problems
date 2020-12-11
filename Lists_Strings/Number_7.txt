@@ -17,10 +17,11 @@ puts sum
 
 # recursion
 def sum_list(array)
-  puts array if array.count == 1
-  return true if array.count == 1
+  if array.count == 1
+    puts array[0]
+    return true  
+  end
   
-  puts array
   array[-2] += array[-1]
   array.pop
 

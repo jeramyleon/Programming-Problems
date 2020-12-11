@@ -1,0 +1,40 @@
+#17 Implement the following sorting algorithms: Selection sort, Insertion sort, Merge sort, Quick sort, Stooge Sort. Check Wikipedia for descriptions.
+
+# Selection Sort
+list = [ 2, 8, 5, 3, 9, 4, 1 ]
+
+for element1 in 0..list.count-1
+
+  current_element = list[element1]
+
+  for element2 in element1+1..list.count-1
+
+    next_element = list[element2]
+
+    if next_element < current_element
+      current_minimum = next_element
+    end
+
+  end
+
+  current_element, 
+
+end
+
+#solution
+def selection_sort(a)
+    n=a.length
+   for i in 0...n 
+    min=i
+    for j in (i+1)...n
+        if a[j]<a[min]
+            temp=a[j]
+            a[j]=a[min]
+            a[min]=temp
+        end
+    end
+   end
+   return a
+end
+
+

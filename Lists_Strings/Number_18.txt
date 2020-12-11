@@ -1,0 +1,32 @@
+#18 Implement binary search.
+list = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+
+def binary_search(arr, num = 5)
+  puts arr
+  mid = arr.count/2
+
+  if arr[mid] < num
+    new_array = (arr[mid]..arr.last).to_a
+      if new_array.count == 1
+        return false
+      else   
+        puts "Not found yet"
+        binary_search(new_array)
+      end
+  elsif arr[mid] > num
+    new_array = (arr.first..arr[mid]).to_a
+      if new_array.count == 1
+        return false
+      else
+        puts "Not found yet"
+        binary_search(new_array)
+      end
+  elsif arr[mid] == num
+    return true
+  end 
+
+end
+
+
+puts binary_search(list)
+
