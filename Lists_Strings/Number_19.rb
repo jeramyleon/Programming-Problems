@@ -11,13 +11,6 @@
 
 list = [ "Hi", "My", "name", "is", "Kanye" ]
 
-
-def add_space(word, word2)
-  until word.count == word2.count - 1
-    word << " "
-  end
-end
-
 def frame(arr)
 
   largest_string = "* " + arr.max_by(&:length) + " *"
@@ -32,6 +25,8 @@ def frame(arr)
   new_array.push(start_string)
   arr.each { |word| new_array.push("* " + word) }
   new_array.push(start_string)
+  
+  
   
 end
 
