@@ -1,5 +1,4 @@
-
 #Beginner 1. Write a program that prints ‘Hello World’ to the screen.
 
-p "Hello World"
+print "Hello World"
 

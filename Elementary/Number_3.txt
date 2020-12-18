@@ -1,6 +1,0 @@
-#Beginner 3 Modify the previous program such that only the users Alice and Bob are greeted with their names.
-
-p "What is your name?"
-name = gets.chomp.downcase
-p "who are you" if  name != "alice" && name != "bob"
-p "Hey there #{name}" if name == "alice" || name == "bob"
